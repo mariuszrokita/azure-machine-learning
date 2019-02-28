@@ -1,8 +1,6 @@
 import config
-import difflib 
 import pandas as pd
 import pyodbc
-import re 
 import sqlalchemy
 
 from datetime import datetime
