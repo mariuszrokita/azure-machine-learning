@@ -1,6 +1,6 @@
-# Brief code description
+# Description
 
-The code presents an example of dockerized python code that loads data from Azure SQL database into Pandas data frame, performs some calculations (i.e. data cleaning, feature engineering) and saves changes back in the database.
+The code presents an example of dockerized python code that loads data from Azure SQL database into Pandas data frame, performs some calculations (i.e. data cleaning, feature engineering) and saves changes back to the database.
 
 The main challenge was to establish a connection to the Azure SQL database from the docker container, which was not possible due to the following error:
 
