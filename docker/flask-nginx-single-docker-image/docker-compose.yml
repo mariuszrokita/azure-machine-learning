@@ -3,19 +3,10 @@ version: "3.7"
 services:
 
   flask:
-    build: ./flask
-    container_name: flask
+    build: .
+    container_name: flaskapp
     restart: always
     environment:
       - APP_NAME=MyFlaskApp
-    # Expose ports only to internal services, containers within same network.
-    # It won't expose ports to the outside world.
-    expose:
-      - 8080
-
-  nginx:
-    build: ./nginx
-    container_name: nginx
-    restart: always
     ports:
-      - "80:80"
+      - 80:5000
