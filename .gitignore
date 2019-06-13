@@ -1,3 +1,4 @@
 docker/cleaning-data-in-azure-sql-database/.vscode
 docker/flask-nginx-separate-docker-images/.vscode/
 docker/flask-nginx-separate-docker-images/flask/env/
+docker/flask-nginx-single-docker-image/.vscode/
