@@ -1,16 +1,27 @@
-FROM ubuntu:latest
+FROM python:3.6-slim
 
-RUN apt-get update -y && \  
-    apt-get install -y python3-pip python3-dev && \
-    apt-get install -y uwsgi uwsgi-plugin-python3
+RUN apt-get clean \
+    && apt-get -y update
 
-COPY ./requirements.txt /requirements.txt
+RUN apt-get -y install nginx \
+    && apt-get -y install python3-dev \
+    && apt-get -y install build-essential
 
-WORKDIR /
+# install requirements
+COPY requirements.txt /
+RUN pip install -r requirements.txt
 
-RUN pip3 install -r requirements.txt
+# copy application files
+COPY app /flaskapp/app
+COPY .   /flaskapp
 
-COPY app app
-COPY . /
+# set working directory
+WORKDIR /flaskapp
 
-ENTRYPOINT [ "/bin/bash", "/launcher.sh"]  
+# inform about ports used by apps and services
+EXPOSE 80
+
+# execute startup script
+COPY nginx.conf /etc/nginx
+RUN chmod +x ./launcher.sh
+CMD ["./launcher.sh"]

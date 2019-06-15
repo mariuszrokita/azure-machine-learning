@@ -5,8 +5,5 @@ services:
   flask:
     build: .
     container_name: flaskapp
-    restart: always
-    environment:
-      - APP_NAME=MyFlaskApp
     ports:
-      - 8000:8000
+      - 80:80    
