@@ -9,4 +9,4 @@ services:
     environment:
       - APP_NAME=MyFlaskApp
     ports:
-      - 80:5000
+      - 8000:8000
