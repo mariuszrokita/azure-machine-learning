@@ -8,7 +8,7 @@ RUN apt-get -y install nginx \
     && apt-get -y install build-essential
 
 # install requirements
-COPY requirements.txt /
+COPY app/requirements.txt /
 RUN pip install -r requirements.txt
 
 # copy application files
@@ -24,4 +24,9 @@ EXPOSE 80
 # execute startup script
 COPY nginx.conf /etc/nginx
 RUN chmod +x ./launcher.sh
-CMD ["./launcher.sh"]
+
+ENTRYPOINT [ "/bin/bash" \
+            ,"./launcher.sh" \
+# run either production stack (Nginx + uWsgi) or Flask web server for development purposes
+#            ,"-d debug" \
+            ]
