@@ -1,5 +1,7 @@
-# Use the Python3.7.2 image
-FROM python:3.7.2-stretch
+FROM ubuntu:latest
+
+RUN apt-get update -y && \  
+    apt-get install -y python3-pip python3-dev
 
 # Set the working directory to /app
 WORKDIR /app
@@ -8,7 +10,7 @@ WORKDIR /app
 ADD . /app
 
 # Install the dependencies
-RUN pip install -r requirements.txt
+RUN pip3 install -r requirements.txt
 
 # run the command to start uWSGI
 CMD ["uwsgi", "app.ini"]
