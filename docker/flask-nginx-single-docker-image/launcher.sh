@@ -27,5 +27,8 @@ then
 else  
   echo "Running app in production mode!"
   service nginx start
-  uwsgi --ini uwsgi.ini
+  
+  # Run either Gunicorn or uWSGI
+  gunicorn -c gunicorn.py app.app:application
+  #uwsgi --ini uwsgi.ini  
 fi
