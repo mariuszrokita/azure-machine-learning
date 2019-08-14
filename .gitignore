@@ -3,3 +3,4 @@ docker/flask-nginx-separate-docker-images/.vscode/
 docker/flask-nginx-separate-docker-images/flask/env/
 docker/flask-nginx-single-docker-image/.vscode/
 docker/flask-nginx-single-docker-image/env/
+cognitive-services/.ipynb_checkpoints
