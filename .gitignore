@@ -4,5 +4,4 @@ docker/flask-nginx-separate-docker-images/flask/env/
 docker/flask-nginx-single-docker-image/.vscode/
 docker/flask-nginx-single-docker-image/env/
 cognitive-services/.ipynb_checkpoints
-azure-machine-learning-service/.azureml
-azure-machine-learning-service/.ipynb_checkpoints
+
