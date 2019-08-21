@@ -18,4 +18,7 @@ conda install nb_conda
 
 # Install the base SDK and Jupyter Notebook
 pip install azureml-sdk[notebooks]
+
+# Install other required packages
+pip install -r notebooks/requirements.txt
 ```
