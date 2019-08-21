@@ -1,7 +1,7 @@
 import os
 import urllib.request
 
-data_raw_folder = '../../data/raw'
+data_raw_folder = '../../notebooks/data/raw'
 
 # create a folder for the dataset if it doesn't exist yet
 os.makedirs(data_raw_folder, exist_ok = True)
