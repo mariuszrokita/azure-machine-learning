@@ -16,9 +16,11 @@ conda activate amlenv
 # Install Jupyter
 conda install nb_conda
 
-# Install the base SDK and Jupyter Notebook
-pip install azureml-sdk[notebooks]
-
 # Install other required packages
 pip install -r notebooks/requirements.txt
+
+# Install lightgbm (this was required to fix the problem on MacOS)
+conda install -c conda-forge lightgbm
 ```
+
+

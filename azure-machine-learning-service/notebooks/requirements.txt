@@ -1,4 +1,4 @@
-matplotlib
-numpy
-scikit-learn
+azureml-sdk[notebooks]
 azureml-sdk
+azureml-train-automl
+matplotlib
